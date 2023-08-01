@@ -18,8 +18,10 @@ ValidationTest = ValidationType.BENDING;
 % generated ROM using the script named "generate_cylinder_ROM"
 S = load("ROMs\PDE_ROM.mat");
 cyl.P = S.cyl.P;
-cyl.K = S.cyl.K(1:12,1:12);    %no dynamic modes
-cyl.M = S.cyl.M(1:12,1:12);    %no dynamic modes
+% cyl.K = S.cyl.K(1:18,1:18);    %no dynamic modes
+% cyl.M = S.cyl.M(1:18,1:18);    %no dynamic modes
+cyl.K = S.cyl.K;
+cyl.M = S.cyl.M;
 
 
 %% Clear intermediate variable
